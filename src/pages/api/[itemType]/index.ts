@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { allItemsByIndex, createItem } from "../../../lib/fauna";
+import handleCors from "../../../lib/cors";
 
 type Data = {
   items?: Item[];
@@ -7,10 +8,10 @@ type Data = {
   message?: string;
 };
 
-export default async (
-  { method, body, query }: NextApiRequest,
-  res: NextApiResponse<Data>
-) => {
+export default async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  if (handleCors(req, res)) return;
+
+  const { method, body, query } = req;
   const { itemType } = query;
 
   if (method === "GET") {
