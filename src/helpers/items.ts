@@ -1,3 +1,4 @@
+export const items = [];
 // export const sortBooksIntoCategories = (books: Book[]): CategoryWithBooks[] => {
 //   const map = books.reduce((acum, book) => {
 //     const category = book.category.toLowerCase();
