@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "../../styles/styled";
+import styled from "../styles/styled";
 
 const Wrapper = styled.div<{ invalid?: boolean }>`
   --grey: #f5f5f5;

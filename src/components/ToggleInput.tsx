@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "../../styles/styled";
+import styled from "../styles/styled";
 import { css } from "@emotion/core";
 
 const Wrapper = styled.div`
